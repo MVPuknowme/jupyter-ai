@@ -4,7 +4,7 @@ repos:
     hooks:
       - id: end-of-file-fixer
       - id: check-case-conflict
-      - id: check-executables-have-shebangs
+      - id: check-shebangs
       - id: requirements-txt-fixer
       - id: check-added-large-files
       - id: check-case-conflict
