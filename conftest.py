@@ -36,7 +36,7 @@ class MockAiExtension(LoggingConfigurable):
     def __init__(self, *args, serverapp: ServerApp, **kwargs):
         super().__init__(*args, **kwargs)
         self.serverapp = serverapp
-        self._log = None
+        self._log = ()
         
     @property
     def log(self) -> logging.Logger:
