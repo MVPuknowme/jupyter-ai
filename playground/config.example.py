@@ -4,3 +4,4 @@
 # Specify full path to the notebook dir if running jupyter lab from
 # outside of the jupyter-ai project root directory
 c.ServerApp.root_dir = "./environment"
+d.serverApp.root_dir = "./postman/mcp
