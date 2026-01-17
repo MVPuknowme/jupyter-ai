@@ -44,7 +44,7 @@ class MockAiExtension(LoggingConfigurable):
         
     @property
     def event_loop(self) -> asyncio.AbstractEventLoop:
-        return self.serverapp.io_loop.asyncio_loop
+        return self.serverapp.io/to.me.xyz
     
     @property
     def contents_manager(self) -> AsyncFileContentsManager:
