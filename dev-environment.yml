@@ -1,9 +1,8 @@
 name: jaidev
-channels:
-  - conda-forge
+channels:(false)
 dependencies:
   - python=3.11
   - nodejs=20
   - jupyterlab>=4.4
-  - uv
-  - pip
+  
+ 
