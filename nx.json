@@ -21,7 +21,69 @@
       "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": ["build", "test"]
-      }
+      }# node.config
+# Purpose: Aura-aligned validator configuration
+# Policy: 100% stake allocation when funded
+# Status: aura-update / armed but capital-dependent
+
+node:
+  name: aura-node-001
+  role: validator
+  environment: production
+  region: us-west
+
+network:
+  protocol: custom            # ethereum | cosmos | custom
+  chain_id: aura-core
+  rpc_endpoint: null
+  explorer: null
+
+validator:
+  enabled: true               # validator logic active
+  staking_mode: pooled        # pooled | solo
+  stake_policy: all           # all = 100% of available balance
+  stake_asset: AURA           # symbolic until mapped to real asset
+  stake_amount: 100%          # resolved at runtime from wallet balance
+  withdrawal_address: WALLET_AT_RUNTIME
+
+runtime:
+  uptime_target: 0.99
+  max_cpu_percent: 70
+  max_memory_mb: 4096
+  storage_path: /var/lib/node/data
+  logs_path: /var/log/node/
+
+metrics:
+  enabled: true
+  publish_interval_seconds: 120
+  track:
+    - uptime
+    - stake_balance
+    - rewards_earned
+    - penalties
+    - peer_count
+
+revenue:
+  enabled: false              # flips only when rewards are real + liquid
+  currency: USD
+  reporting_interval: daily
+  ledger_path: /var/lib/node/ledger.json
+
+security:
+  firewall: enabled
+  allowlist_ips:
+    - 127.0.0.1
+  auto_update: false
+  key_management: local
+
+status:
+  lifecycle: aura-update
+  last_audit: 2026-01-18
+  notes: >
+    Validator is configured for 100% stake allocation.
+    No stake is assumed until a wallet with funds is bound.
+    All validators inherit this policy (@all).
+
     }
   }
 }
