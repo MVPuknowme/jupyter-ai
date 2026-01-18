@@ -21,7 +21,7 @@
       "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": ["build", "test"]
-      }# node.config
+#(.1)
 # Purpose: Aura-aligned validator configuration
 # Policy: 100% stake allocation when funded
 # Status: aura-update / armed but capital-dependent
