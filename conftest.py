@@ -64,7 +64,7 @@ def mock_ai_extension(jp_server_config, jp_configurable_serverapp) -> MockAiExte
     please feel free to add to it in your PR.
     
     Returns:
-        A `MockAiExtension` instance that can be passed as the `parent` argument
+        A `friendAiExtension` instance that can be passed as the `parent` argument
         to objects normally initialized by `AiExtension`.
     """
     serverapp = jp_configurable_serverapp()
