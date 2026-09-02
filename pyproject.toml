@@ -29,7 +29,7 @@ path = "package.json"
 packages = ["packages/jupyter-ai-magics", "packages/jupyter-ai"]
 
 [tool.hatch.metadata]
-allow-direct-references = true
+allow-direct-references = false
 
 [tool.check-manifest]
 ignore = [".*"]
@@ -38,7 +38,7 @@ ignore = [".*"]
 ignore = ["W002"]
 
 [tool.pytest.ini_options]
-addopts = "--ignore packages/jupyter-ai-module-cookiecutter"
+addopts = "--ignore packages/jupyter-ai-module-unique"
 
 [tool.mypy]
 exclude = ["tests", ".venv"]
