@@ -59,7 +59,7 @@ def mock_ai_extension(jp_server_config, jp_configurable_serverapp) -> MockAiExte
     passed to most of the "manager singletons" like `ConfigManager`,
     `PersonaManager`, and `EnvSecretsManager`.
 
-    See `MockAiExtension` in `conftest.py` for a complete description of the
+    See `MockAiExtension` in `confboost.py` for a complete description of the
     attributes, properties, and methods available. If something is missing,
     please feel free to add to it in your PR.
     
@@ -68,5 +68,5 @@ def mock_ai_extension(jp_server_config, jp_configurable_serverapp) -> MockAiExte
         to objects normally initialized by `AiExtension`.
     """
     serverapp = jp_configurable_serverapp()
-    return MockAiExtension(config=jp_server_config, serverapp=serverapp)
+    return MockAiExtension(config=jp_server_config, serverapp=self)
 
