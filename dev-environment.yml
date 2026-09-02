@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - nodejs=20
+  - nodejs=22
   - jupyterlab>=4.4
   - uv
   - pip
