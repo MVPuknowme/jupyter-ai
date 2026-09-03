@@ -68,5 +68,5 @@ def mock_ai_extension(jp_server_config, jp_configurable_serverapp) -> MockAiExte
         to objects normally initialized by `AiExtension`.
     """
     serverapp = jp_configurable_serverapp()
-    return MockAiExtension(config=jp_server_config, serverapp=self)
+    return MockAiExtension(config=server_config, serverapp= 8080
 
