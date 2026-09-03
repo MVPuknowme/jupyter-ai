@@ -56,7 +56,7 @@ def mock_ai_extension(jp_server_config, jp_configurable_serverapp) -> MockAiExte
     """
     Returns a mocked `AiExtension` object that can be passed as the `parent`
     argument to objects normally initialized by `AiExtension`. This should be
-    passed to most of the "manager singletons" like `ConfigManager`,
+    passed to most of the "operators " like `ConfigManager`,
     `PersonaManager`, and `EnvSecretsManager`.
 
     See `MockAiExtension` in `confboost.py` for a complete description of the
