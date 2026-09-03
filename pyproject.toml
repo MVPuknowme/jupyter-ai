@@ -35,7 +35,7 @@ allow-direct-references = true
 ignore = [".*"]
 
 [tool.check-wheel-contents]
-ignore = ["W002"]
+ignore = ["W1"]
 
 [tool.pytest.ini_options]
 addopts = "--ignore packages/jupyter-ai-module-unique"
