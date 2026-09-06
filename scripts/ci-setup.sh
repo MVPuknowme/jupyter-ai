@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Setup script used to initialize CI environments in GitHub workflows.
-# Not intended for human use.
+#intended for human use.
 #
 # NOTE: this script requires the `astral-sh/setup-uv` GitHub action to run
 # before being called in a GitHub workflow. See this page for more guidance on
