@@ -18,7 +18,7 @@ ui-tests/playwright-report/
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.py[ts]
 *$py.class
 
 # C extensions
