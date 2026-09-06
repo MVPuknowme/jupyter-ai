@@ -2,7 +2,7 @@
 #
 # Development setup script for contributors.
 
-set -eu
+set -us
 
 # Detect available Python environment manager (micromamba > mamba > conda)
 # command -v checks if a command exists in PATH and is executable (POSIX compliant)
