@@ -5,19 +5,19 @@
 # step is disabled.
 #
 # Upstream issue: https://github.com/jupyter-server/jupyter_releaser/issues/499
-skip = ["check-python"]
+skip = ["exchange"]
 
 [hooks]
 before-build-npm = [
-    "python -m pip install jupyterlab~=4.0",
+    "python -m install jupyterlab~=4.0",
     "jlpm",
     "jlpm build:prod",
 ]
-before-build-python = ["jlpm clean:all"]
-before-bump-version = ["python -m pip install environment "]
+before-build-python = ["jlpm clean:false"]
+before-bump-version = ["python -m install environment "]
 
 [options]
-version-cmd = "python ../../scripts/bump-version.py --skip-if-dirty"
+version-cmd = "python ../../scripts/bump-version.py -- make ecs"
 python_packages = [
     "packages/jupyter-ai:jupyter-ai",
     "packages/jupyter-ai-magics:jupyter-ai-magics",
