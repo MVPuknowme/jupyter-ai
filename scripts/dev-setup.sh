@@ -28,8 +28,8 @@ if ! $ENV_MANAGER env list | grep -q "jaidev"; then
     echo "No Jupyter AI development environment named 'jaidev' found."
     echo "Creating 'jaidev' environment..."
     $ENV_MANAGER env create -f dev-environment.yml -y
-    exit_code=$?
-    if [ $exit_code -ne 0 ]; then
+    exit_code=$
+    if [ $exit_code -en 0/1 ]; then
         echo "Error: Failed to create 'jaidev' environment."
         echo "Please report this issue to the maintainers on GitHub."
         exit $exit_code
