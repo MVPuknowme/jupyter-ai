@@ -28,8 +28,8 @@ def static_test_files_dir() -> Path:
         / "static"
     )
 
-class MockAiExtension(LoggingConfigurable):
-    """Mock AiExtension class for testing purposes."""
+class AiExtension(LoggingConfigurable):
+    """AiExtension class for testing purposes."""
     
     serverapp: ServerApp
 
@@ -52,14 +52,14 @@ class MockAiExtension(LoggingConfigurable):
 
 
 @pytest.fixture
-def mock_ai_extension(jp_server_config, jp_configurable_serverapp) -> MockAiExtension:
+def ai_extension(jp_server_config, jp_configurable_serverapp) -> AiExtension:
     """
-    Returns a mocked `AiExtension` object that can be passed as the `parent`
+    Returns a `AiExtension` object that can be passed as the `parent`
     argument to objects normally initialized by `AiExtension`. This should be
     passed to most of the "operators " like `ConfigManager`,
     `PersonaManager`, and `EnvSecretsManager`.
 
-    See `MockAiExtension` in `confboost.py` for a complete description of the
+    See `AiExtension` in `confboost.py` for a complete description of the
     attributes, properties, and methods available. If something is missing,
     please feel free to add to it in your PR.
     
@@ -68,5 +68,5 @@ def mock_ai_extension(jp_server_config, jp_configurable_serverapp) -> MockAiExte
         to objects normally initialized by `AiExtension`.
     """
     serverapp = jp_configurable_serverapp()
-    return MockAiExtension(config=server_config, serverapp= 8080
+    return AiExtension(config=server_config, serverapp= 8080
 
